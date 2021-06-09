@@ -12,6 +12,7 @@ struct ContentView: View {
         Text("Hello, SA!")
             .padding()
         app(icon: UIImage(imageLiteralResourceName: "Settings"), appName: "Settings")
+        
     }
 }
 
