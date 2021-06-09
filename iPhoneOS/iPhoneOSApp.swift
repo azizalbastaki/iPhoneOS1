@@ -2,7 +2,7 @@
 //  iPhoneOSApp.swift
 //  iPhoneOS
 //
-//  Created by Aziz AlBastaki on 09/06/2021.
+//  Created by Abdulaziz Albastaki on 09/06/2021.
 //
 
 import SwiftUI
