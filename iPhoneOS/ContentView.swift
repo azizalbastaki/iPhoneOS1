@@ -22,49 +22,37 @@ struct ContentView: View {
                     Text("(BATTERY)")
                 }
                 .foregroundColor(.white)
-                HStack{
-                    Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Text"), appName: "Text", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Calendar"), appName: "Calendar", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Photos"), appName: "Photos", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Camera"), appName: "Camera", appExecutable: (SettingsApp()))
-                Spacer()
+                appRow(appIcons: ["Text","Calendar","Photos","Camera"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                 
-                }
+                appRow(appIcons: ["YouTube","Stocks","Maps","Weather"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                 
-                HStack{
-                    Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "YouTube"), appName: "YouTube", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Stocks"), appName: "Stocks", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Maps"), appName: "Maps", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Weather"), appName: "Weather", appExecutable: (SettingsApp()))
-                Spacer()
+                appRow(appIcons: ["Clock","Calculator","Notes","Settings"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                 
-                }
                 
-                HStack{
-                    Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Clock"), appName: "Clock", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Calculator"), appName: "Calculator", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Notes"), appName: "Notes", appExecutable: (SettingsApp()))
-                Spacer()
-                app(icon: UIImage(imageLiteralResourceName: "Settings"), appName: "Settings", appExecutable: (SettingsApp()))
-                Spacer()
-                
-                }
             }
         }
         .ignoresSafeArea()
     }
 
+}
+
+struct appRow: View {
+    var appIcons = Array(repeating: "Text", count: 4)
+    var appExecutables = Array(repeating: SettingsApp(), count: 4)
+    var body: some View {
+        HStack{
+            Spacer()
+            app(icon: UIImage(imageLiteralResourceName: appIcons[0]), appName: appIcons[0], appExecutable: appExecutables[0])
+            Spacer()
+            app(icon: UIImage(imageLiteralResourceName: appIcons[1]), appName: appIcons[1], appExecutable: appExecutables[1])
+            Spacer()
+            app(icon: UIImage(imageLiteralResourceName: appIcons[2]), appName: appIcons[2], appExecutable: appExecutables[2])
+            Spacer()
+            app(icon: UIImage(imageLiteralResourceName: appIcons[3]), appName: appIcons[3], appExecutable: appExecutables[3])
+            Spacer()
+            
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
