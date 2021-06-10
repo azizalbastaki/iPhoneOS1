@@ -14,6 +14,7 @@
 		2C89499A2670BB5700E7BE25 /* iPhoneOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949992670BB5700E7BE25 /* iPhoneOSTests.swift */; };
 		2C8949A52670BB5700E7BE25 /* iPhoneOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949A42670BB5700E7BE25 /* iPhoneOSUITests.swift */; };
 		2C8949B32670BBEB00E7BE25 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949B22670BBEB00E7BE25 /* app.swift */; };
+		2C8949B726714F6400E7BE25 /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949B626714F6400E7BE25 /* SettingsApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2C8949A42670BB5700E7BE25 /* iPhoneOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneOSUITests.swift; sourceTree = "<group>"; };
 		2C8949A62670BB5700E7BE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8949B22670BBEB00E7BE25 /* app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
+		2C8949B626714F6400E7BE25 /* SettingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2C8949902670BB5600E7BE25 /* Info.plist */,
 				2C89498D2670BB5600E7BE25 /* Preview Content */,
 				2C8949B22670BBEB00E7BE25 /* app.swift */,
+				2C8949B626714F6400E7BE25 /* SettingsApp.swift */,
 			);
 			path = iPhoneOS;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				2C89498A2670BB5400E7BE25 /* ContentView.swift in Sources */,
 				2C8949B32670BBEB00E7BE25 /* app.swift in Sources */,
+				2C8949B726714F6400E7BE25 /* SettingsApp.swift in Sources */,
 				2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

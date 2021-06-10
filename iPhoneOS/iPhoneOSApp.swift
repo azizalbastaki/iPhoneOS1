@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct iPhoneOSApp: App {
     var body: some Scene {
