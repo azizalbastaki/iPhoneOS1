@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C43137F26729E760000BC5B /* homeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43137E26729E760000BC5B /* homeButton.swift */; };
 		2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949872670BB5400E7BE25 /* iPhoneOSApp.swift */; };
 		2C89498A2670BB5400E7BE25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949892670BB5400E7BE25 /* ContentView.swift */; };
 		2C89498C2670BB5600E7BE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C89498B2670BB5600E7BE25 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C43137E26729E760000BC5B /* homeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeButton.swift; sourceTree = "<group>"; };
 		2C8949842670BB5400E7BE25 /* iPhoneOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8949872670BB5400E7BE25 /* iPhoneOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneOSApp.swift; sourceTree = "<group>"; };
 		2C8949892670BB5400E7BE25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				2C89498D2670BB5600E7BE25 /* Preview Content */,
 				2C8949B22670BBEB00E7BE25 /* app.swift */,
 				2C8949B626714F6400E7BE25 /* SettingsApp.swift */,
+				2C43137E26729E760000BC5B /* homeButton.swift */,
 			);
 			path = iPhoneOS;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				2C89498A2670BB5400E7BE25 /* ContentView.swift in Sources */,
 				2C8949B32670BBEB00E7BE25 /* app.swift in Sources */,
 				2C8949B726714F6400E7BE25 /* SettingsApp.swift in Sources */,
+				2C43137F26729E760000BC5B /* homeButton.swift in Sources */,
 				2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
