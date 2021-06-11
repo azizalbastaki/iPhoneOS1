@@ -11,8 +11,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color.black
-            
-            
             VStack{
                 HStack {
                     Text("No Service")
@@ -22,18 +20,32 @@ struct ContentView: View {
                     Text("(BATTERY)")
                 }
                 .foregroundColor(.white)
+                
                 appRow(appIcons: ["Text","Calendar","Photos","Camera"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                 
                 appRow(appIcons: ["YouTube","Stocks","Maps","Weather"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                 
                 appRow(appIcons: ["Clock","Calculator","Notes","Settings"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
+                VStack{
+                HStack {
+                    ZStack{
+                        Color.gray
+                        appRow(appIcons: ["Phone","Mail","Safari","iPod"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
+                        
+                    }.frame(height: 100)
+                }
                 
+                homeButton()
+                    .offset(y:20)
+                }
+                .offset(y:250)
                 
             }
+            .offset(x: 0, y: -120)
         }
         .ignoresSafeArea()
     }
-
+    
 }
 
 struct appRow: View {

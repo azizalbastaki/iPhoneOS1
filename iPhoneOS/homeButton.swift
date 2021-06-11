@@ -9,21 +9,22 @@ import SwiftUI
 
 struct homeButton: View {
     var body: some View {
-            ZStack{
-                Color.black
+        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 ZStack{
-                    
                 Circle()
-                    //.fill(LinearGradient(gradient: Gradient(colors: [Color.black, Color.white]), startPoint: .center, endPoint: .bottom))
-                    .fill(RadialGradient(gradient: Gradient(colors: [Color.white, Color.black]), center: .bottom, startRadius:10, endRadius: 300))
+                    .fill(RadialGradient(gradient: Gradient(colors: [Color.white, Color.black]), center: .bottom, startRadius:-0.02, endRadius: 40))
+                    .frame(width:100 , height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+
                 Circle()
                     .strokeBorder(Color.white, lineWidth: 0.3)
-                RoundedRectangle(cornerRadius: 55, style: .continuous)
-                    .stroke(Color.white, lineWidth: 10)
-                    .frame(width: 220, height: 220, alignment: .center)
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                RoundedRectangle(cornerRadius:10, style: .continuous)
+                    .stroke(Color.white, lineWidth:3)
+                    .frame(width: 50, height: 50, alignment: .center)
+                    
                 
                 }
-            }
+        })
         
         }
     }
