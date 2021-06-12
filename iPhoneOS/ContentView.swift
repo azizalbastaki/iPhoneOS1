@@ -30,6 +30,14 @@ struct ContentView: View {
                 HStack {
                     ZStack{
                         Color.gray
+                        dock(rows: 50, cols: 160)
+                            .fill(Color.white)
+                            .frame(height: 75)
+                            .offset(y:-12)
+                        Rectangle()
+                            .fill(
+                                LinearGradient(gradient: Gradient(colors: [Color.clear, dockColor]), startPoint: .bottom, endPoint: .top))
+                        
                         appRow(appIcons: ["Phone","Mail","Safari","iPod"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                         
                     }.frame(height: 100)
@@ -40,6 +48,7 @@ struct ContentView: View {
                 }
                 .offset(y:250)
                 
+                
             }
             .offset(x: 0, y: -120)
         }
@@ -47,7 +56,6 @@ struct ContentView: View {
     }
     
 }
-
 struct appRow: View {
     var appIcons = Array(repeating: "Text", count: 4)
     var appExecutables = Array(repeating: SettingsApp(), count: 4)
@@ -64,6 +72,30 @@ struct appRow: View {
             Spacer()
             
         }
+    }
+}
+
+struct dock: Shape {
+    let rows: Int
+    let cols: Int
+    
+    func path(in rect: CGRect) -> Path {
+        let rowWidth = rect.height/CGFloat(rows)
+        let colWidth = rect.width/CGFloat(cols)
+        var path = Path()
+        
+        for row in 0..<rows {
+            for col in 0..<cols {
+                if (row+col).isMultiple(of: 2) {
+                let startX = colWidth * CGFloat(col)
+                let startY = rowWidth * CGFloat(row)
+                
+                let rect = CGRect(x: startX, y: startY, width: colWidth, height: rowWidth)
+                path.addRect(rect)
+            }
+            }
+        }
+        return path
     }
 }
 

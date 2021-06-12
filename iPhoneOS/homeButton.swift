@@ -2,7 +2,7 @@
 //  homeButton.swift
 //  iPhoneOS
 //
-//  Created by Aziz AlBastaki on 10/06/2021.
+//  Created by Abdulaziz Albastaki on 10/06/2021.
 //
 
 import SwiftUI
@@ -19,8 +19,8 @@ struct homeButton: View {
                     .strokeBorder(Color.white, lineWidth: 0.3)
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 RoundedRectangle(cornerRadius:10, style: .continuous)
-                    .stroke(Color.white, lineWidth:3)
-                    .frame(width: 50, height: 50, alignment: .center)
+                    .stroke(Color.white, lineWidth:2)
+                    .frame(width: 40, height: 40, alignment: .center)
                     
                 
                 }
