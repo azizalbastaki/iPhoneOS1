@@ -10,7 +10,7 @@ import SwiftUI
 struct iPhoneOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            lockScreen()
         }
     }
 }

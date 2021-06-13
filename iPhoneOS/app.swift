@@ -22,6 +22,7 @@ struct app: View {
         })
             Text(appName).font(.system(size:14))
                 .foregroundColor(.white)
+                .bold()
         }
         
     }
