@@ -20,6 +20,7 @@
 		2C8949B726714F6400E7BE25 /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949B626714F6400E7BE25 /* SettingsApp.swift */; };
 		2CA12679267758DD0052FE78 /* customShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA12678267758DD0052FE78 /* customShapes.swift */; };
 		2CA1267B267764A30052FE78 /* STUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1267A267764A30052FE78 /* STUButton.swift */; };
+		2CA1267D2677CD290052FE78 /* currentStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1267C2677CD290052FE78 /* currentStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2C8949B626714F6400E7BE25 /* SettingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApp.swift; sourceTree = "<group>"; };
 		2CA12678267758DD0052FE78 /* customShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customShapes.swift; sourceTree = "<group>"; };
 		2CA1267A267764A30052FE78 /* STUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUButton.swift; sourceTree = "<group>"; };
+		2CA1267C2677CD290052FE78 /* currentStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currentStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,18 +111,13 @@
 		2C8949862670BB5400E7BE25 /* iPhoneOS */ = {
 			isa = PBXGroup;
 			children = (
+				2CA1267E2677CDD40052FE78 /* Views */,
 				2CA12678267758DD0052FE78 /* customShapes.swift */,
 				2C8949872670BB5400E7BE25 /* iPhoneOSApp.swift */,
-				2C8949892670BB5400E7BE25 /* ContentView.swift */,
 				2C89498B2670BB5600E7BE25 /* Assets.xcassets */,
 				2C8949902670BB5600E7BE25 /* Info.plist */,
 				2C89498D2670BB5600E7BE25 /* Preview Content */,
-				2C8949B22670BBEB00E7BE25 /* app.swift */,
-				2C8949B626714F6400E7BE25 /* SettingsApp.swift */,
-				2C43137E26729E760000BC5B /* homeButton.swift */,
 				2C88FA3426751101007DDBB0 /* customColors.swift */,
-				2C88FA3626754B49007DDBB0 /* lockScreen.swift */,
-				2CA1267A267764A30052FE78 /* STUButton.swift */,
 			);
 			path = iPhoneOS;
 			sourceTree = "<group>";
@@ -149,6 +146,28 @@
 				2C8949A62670BB5700E7BE25 /* Info.plist */,
 			);
 			path = iPhoneOSUITests;
+			sourceTree = "<group>";
+		};
+		2CA1267E2677CDD40052FE78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CA1267F2677CDFE0052FE78 /* ComponentViews */,
+				2CA1267C2677CD290052FE78 /* currentStateView.swift */,
+				2C8949892670BB5400E7BE25 /* ContentView.swift */,
+				2C8949B626714F6400E7BE25 /* SettingsApp.swift */,
+				2C88FA3626754B49007DDBB0 /* lockScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CA1267F2677CDFE0052FE78 /* ComponentViews */ = {
+			isa = PBXGroup;
+			children = (
+				2C8949B22670BBEB00E7BE25 /* app.swift */,
+				2C43137E26729E760000BC5B /* homeButton.swift */,
+				2CA1267A267764A30052FE78 /* STUButton.swift */,
+			);
+			path = ComponentViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +305,7 @@
 				2C43137F26729E760000BC5B /* homeButton.swift in Sources */,
 				2CA12679267758DD0052FE78 /* customShapes.swift in Sources */,
 				2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */,
+				2CA1267D2677CD290052FE78 /* currentStateView.swift in Sources */,
 				2C88FA3526751101007DDBB0 /* customColors.swift in Sources */,
 				2CA1267B267764A30052FE78 /* STUButton.swift in Sources */,
 				2C88FA3726754B49007DDBB0 /* lockScreen.swift in Sources */,
