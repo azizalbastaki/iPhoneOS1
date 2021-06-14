@@ -14,33 +14,27 @@ struct lockScreen: View {
     @State fileprivate var text = String()
     var body: some View {
         ZStack {
-        Color.black
         Text(text)
             
-            
             HStack {
-                Rectangle()
-                    .fill(LinearGradient(gradient: Gradient(colors: [slideToUnlockTop, slideToUnlockBottom]), startPoint: .top, endPoint: .bottom))
-                    .frame(width: 90, height: 60, alignment: .center)
-                    .cornerRadius(10)
+                STUButton()
                     .offset(x: isDragValid(drag: progress))
-                    .padding(.leading, 50)
                     .gesture(
-                        DragGesture()
-                            .onChanged {
-                                progress = $0.translation
-                                progress.width = progress.width - CGFloat(startingPoint)
-                                if checkDragUnlocked(drag: progress) == true {
-                                    text = "Unlocked"
-                                    progress.width = CGFloat(startingPoint)
-                                }
-                            }
-                            .onEnded {_ in
+                    DragGesture()
+                        .onChanged {
+                            progress = $0.translation
+                            progress.width = progress.width - CGFloat(startingPoint)
+                            if checkDragUnlocked(drag: progress) == true {
+                                text = "Unlocked"
                                 progress.width = CGFloat(startingPoint)
                             }
-                        
-                        
-                    )
+                        }
+                        .onEnded {_ in
+                            progress.width = CGFloat(startingPoint)
+                        }
+                    
+                    
+                )
                 Spacer()
             }
         }
