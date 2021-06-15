@@ -11,40 +11,39 @@ let startingPoint: Int = 0
 
 struct lockScreen: View {
     @State fileprivate var progress:CGSize = CGSize(width: CGFloat(startingPoint), height: 0)
-    @State fileprivate var text = String()
     
     @ObservedObject var currentState: currentView
     var body: some View {
-        ZStack {
-            Color.black
-            Text(text)
-                .foregroundColor(.white)
-            
-            HStack {
-                STUButton()
-                    .offset(x: isDragValid(drag: progress))
-                    .gesture(
-                        DragGesture()
-                            .onChanged {
-                                progress = $0.translation
-                                progress.width = progress.width - CGFloat(startingPoint)
-                                if checkDragUnlocked(drag: progress) == true {
-                                    text = "Unlocked"
-                                    progress.width = CGFloat(startingPoint)
-                                    currentState.locked = false
-                                    
+        VStack {
+            ZStack {
+                HStack {
+                    STUButton()
+                        .offset(x: isDragValid(drag: progress))
+                        .gesture(
+                            DragGesture()
+                                .onChanged {
+                                    progress = $0.translation
+                                    progress.width = progress.width - CGFloat(startingPoint)
+                                    if checkDragUnlocked(drag: progress) == true {
+                                        progress.width = CGFloat(startingPoint)
+                                        currentState.locked = false
+                                        
+                                    }
                                 }
-                            }
-                            .onEnded {_ in
-                                progress.width = CGFloat(startingPoint)
-                            }
-                        
-                        
-                    )
-                    .padding(.leading, 70)
-                Spacer()
-            }
+                                .onEnded {_ in
+                                    progress.width = CGFloat(startingPoint)
+                                }
+                            
+                            
+                        )
+                        .padding(.leading, 70)
+                    Spacer()
+                }
+            
         }
+            //.offset(y:50)
+        }.ignoresSafeArea()
+        
     }
 }
 
@@ -68,6 +67,7 @@ func checkDragUnlocked(drag: CGSize) -> Bool {
 //
 //struct lockScreen_Previews: PreviewProvider {
 //    static var previews: some View {
-//        lockScreen()
+//
+//        lockScreen(currentState: state)
 //    }
 //}

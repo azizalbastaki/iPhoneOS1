@@ -12,14 +12,7 @@ struct ContentView: View {
         ZStack {
             Color.black
             VStack{
-                HStack {
-                    Text("No Service")
-                    Spacer()
-                    Text("9:41 AM")
-                    Spacer()
-                    Text("(BATTERY)")
-                }
-                .foregroundColor(.white)
+                iPhoneOS.statusBar()
                 
                 appRow(appIcons: ["Text","Calendar","Photos","Camera"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                 

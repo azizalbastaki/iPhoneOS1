@@ -2,7 +2,7 @@
 //  currentStateView.swift
 //  iPhoneOS
 //
-//  Created by Aziz AlBastaki on 14/06/2021.
+//  Created by Abdulaziz Albastaki on 14/06/2021.
 //
 
 import SwiftUI

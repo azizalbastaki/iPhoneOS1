@@ -11,7 +11,7 @@
 		2C88FA3526751101007DDBB0 /* customColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88FA3426751101007DDBB0 /* customColors.swift */; };
 		2C88FA3726754B49007DDBB0 /* lockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88FA3626754B49007DDBB0 /* lockScreen.swift */; };
 		2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949872670BB5400E7BE25 /* iPhoneOSApp.swift */; };
-		2C89498A2670BB5400E7BE25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949892670BB5400E7BE25 /* ContentView.swift */; };
+		2C89498A2670BB5400E7BE25 /* homeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949892670BB5400E7BE25 /* homeScreen.swift */; };
 		2C89498C2670BB5600E7BE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C89498B2670BB5600E7BE25 /* Assets.xcassets */; };
 		2C89498F2670BB5600E7BE25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C89498E2670BB5600E7BE25 /* Preview Assets.xcassets */; };
 		2C89499A2670BB5700E7BE25 /* iPhoneOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949992670BB5700E7BE25 /* iPhoneOSTests.swift */; };
@@ -21,6 +21,7 @@
 		2CA12679267758DD0052FE78 /* customShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA12678267758DD0052FE78 /* customShapes.swift */; };
 		2CA1267B267764A30052FE78 /* STUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1267A267764A30052FE78 /* STUButton.swift */; };
 		2CA1267D2677CD290052FE78 /* currentStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1267C2677CD290052FE78 /* currentStateView.swift */; };
+		2CA1268126793C280052FE78 /* statusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1268026793C280052FE78 /* statusBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,7 @@
 		2C88FA3626754B49007DDBB0 /* lockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lockScreen.swift; sourceTree = "<group>"; };
 		2C8949842670BB5400E7BE25 /* iPhoneOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8949872670BB5400E7BE25 /* iPhoneOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneOSApp.swift; sourceTree = "<group>"; };
-		2C8949892670BB5400E7BE25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C8949892670BB5400E7BE25 /* homeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreen.swift; sourceTree = "<group>"; };
 		2C89498B2670BB5600E7BE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C89498E2670BB5600E7BE25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C8949902670BB5600E7BE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		2CA12678267758DD0052FE78 /* customShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customShapes.swift; sourceTree = "<group>"; };
 		2CA1267A267764A30052FE78 /* STUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUButton.swift; sourceTree = "<group>"; };
 		2CA1267C2677CD290052FE78 /* currentStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currentStateView.swift; sourceTree = "<group>"; };
+		2CA1268026793C280052FE78 /* statusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +155,7 @@
 			children = (
 				2CA1267F2677CDFE0052FE78 /* ComponentViews */,
 				2CA1267C2677CD290052FE78 /* currentStateView.swift */,
-				2C8949892670BB5400E7BE25 /* ContentView.swift */,
+				2C8949892670BB5400E7BE25 /* homeScreen.swift */,
 				2C8949B626714F6400E7BE25 /* SettingsApp.swift */,
 				2C88FA3626754B49007DDBB0 /* lockScreen.swift */,
 			);
@@ -166,6 +168,7 @@
 				2C8949B22670BBEB00E7BE25 /* app.swift */,
 				2C43137E26729E760000BC5B /* homeButton.swift */,
 				2CA1267A267764A30052FE78 /* STUButton.swift */,
+				2CA1268026793C280052FE78 /* statusBar.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -299,13 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C89498A2670BB5400E7BE25 /* ContentView.swift in Sources */,
+				2C89498A2670BB5400E7BE25 /* homeScreen.swift in Sources */,
 				2C8949B32670BBEB00E7BE25 /* app.swift in Sources */,
 				2C8949B726714F6400E7BE25 /* SettingsApp.swift in Sources */,
 				2C43137F26729E760000BC5B /* homeButton.swift in Sources */,
 				2CA12679267758DD0052FE78 /* customShapes.swift in Sources */,
 				2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */,
 				2CA1267D2677CD290052FE78 /* currentStateView.swift in Sources */,
+				2CA1268126793C280052FE78 /* statusBar.swift in Sources */,
 				2C88FA3526751101007DDBB0 /* customColors.swift in Sources */,
 				2CA1267B267764A30052FE78 /* STUButton.swift in Sources */,
 				2C88FA3726754B49007DDBB0 /* lockScreen.swift in Sources */,
