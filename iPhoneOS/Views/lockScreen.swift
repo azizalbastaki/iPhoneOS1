@@ -14,35 +14,37 @@ struct lockScreen: View {
     
     @ObservedObject var currentState: currentView
     var body: some View {
-        VStack {
-            ZStack {
-                HStack {
-                    STUButton()
-                        .offset(x: isDragValid(drag: progress))
-                        .gesture(
-                            DragGesture()
-                                .onChanged {
-                                    progress = $0.translation
-                                    progress.width = progress.width - CGFloat(startingPoint)
-                                    if checkDragUnlocked(drag: progress) == true {
-                                        progress.width = CGFloat(startingPoint)
-                                        currentState.locked = false
-                                        
+        ZStack {
+            Color.black
+            VStack {
+                iPhoneOS.statusBar()
+                    .offset(y: 50)
+                Spacer()
+                ZStack {
+                    HStack {
+                        STUButton()
+                            .offset(x: isDragValid(drag: progress))
+                            .gesture(
+                                DragGesture()
+                                    .onChanged {
+                                        progress = $0.translation
+                                        progress.width = progress.width - CGFloat(startingPoint)
+                                        if checkDragUnlocked(drag: progress) == true {
+                                            progress.width = CGFloat(startingPoint)
+                                            currentState.locked = false
+                                        }
                                     }
-                                }
-                                .onEnded {_ in
-                                    progress.width = CGFloat(startingPoint)
-                                }
-                            
-                            
-                        )
-                        .padding(.leading, 70)
-                    Spacer()
+                                    .onEnded {_ in
+                                        progress.width = CGFloat(startingPoint)
+                                    }
+                            )
+                            .padding(.leading, 70)
+                        Spacer()
+                    }
                 }
-            
-        }
-            //.offset(y:50)
-        }.ignoresSafeArea()
+                Spacer()
+            }
+            }.ignoresSafeArea()
         
     }
 }
