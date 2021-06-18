@@ -16,9 +16,9 @@ struct lockScreen: View {
     var body: some View {
         ZStack {
             Color.black
+                .ignoresSafeArea()
             VStack {
                 iPhoneOS.statusBar()
-                    .offset(y: 50)
                 Spacer()
                 ZStack {
                     HStack {
@@ -44,8 +44,15 @@ struct lockScreen: View {
                 }
                 Spacer()
             }
-            }.ignoresSafeArea()
-        
+            .offset(y: 40)
+            .ignoresSafeArea()
+            .background(
+            Image("Masfoot")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .offset(y: -7)
+            )
+    }
     }
 }
 
