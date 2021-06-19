@@ -14,9 +14,6 @@ struct lockScreen: View {
     
     @ObservedObject var currentState: currentView
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
             VStack {
                 iPhoneOS.statusBar()
                 Spacer()
@@ -44,15 +41,18 @@ struct lockScreen: View {
                 }
                 Spacer()
             }
-            .offset(y: 40)
-            .ignoresSafeArea()
+            //.offset(y: 40)
             .background(
-            Image("Masfoot")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .offset(y: -7)
+                ZStack {
+                    Color.black
+                        .ignoresSafeArea()
+                    
+                    Image("Masfoot")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
             )
-    }
+        
     }
 }
 
@@ -70,6 +70,12 @@ func checkDragUnlocked(drag: CGSize) -> Bool {
         return true
     } else {
         return false
+    }
+}
+
+struct dateAndTime: View {
+    var body: some View {
+        Text("Hello World!")
     }
 }
 

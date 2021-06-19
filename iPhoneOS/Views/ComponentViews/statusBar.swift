@@ -19,6 +19,7 @@ struct statusBar: View {
         .foregroundColor(.white)
         .background(Color.black
                         .opacity(0.5))
+
     }
 }
 

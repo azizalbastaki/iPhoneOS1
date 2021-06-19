@@ -37,7 +37,7 @@ struct ContentView: View {
                 }
                 
                 homeButton()
-                    .offset(y:20)
+                    .offset(y:5)
                 }
                 .offset(y:250)
                 
@@ -45,7 +45,9 @@ struct ContentView: View {
             }
             .offset(x: 0, y: -120)
         }
-        .ignoresSafeArea()
+        .background(Color.black
+                        .ignoresSafeArea())
+       // .ignoresSafeArea()
     }
     
 }
