@@ -16,7 +16,7 @@ struct lockScreen: View {
     var body: some View {
             VStack {
                 iPhoneOS.statusBar()
-                Spacer()
+                dateAndTime()
                 ZStack {
                     HStack {
                         STUButton()
@@ -47,7 +47,7 @@ struct lockScreen: View {
                     Color.black
                         .ignoresSafeArea()
                     
-                    Image("Masfoot")
+                    Image("DisneyCruise")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 }
@@ -75,14 +75,28 @@ func checkDragUnlocked(drag: CGSize) -> Bool {
 
 struct dateAndTime: View {
     var body: some View {
-        Text("Hello World!")
+        ZStack {
+            Rectangle()
+                .fill(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .center, endPoint: .top))
+                .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .padding(.top, -8)
+                .opacity(0.6)
+            VStack {
+                
+                Text("9:41")
+                    .font(.custom("Helvetica", size: 100))
+                    .fontWeight(.light)
+                Text("Thursday, February 24")
+                    .font(.custom("Helvetica", size: 20))
+                    //.fontWeight(.light)
+            }.foregroundColor(.white)
+        }
+        
     }
 }
 
-//
-//struct lockScreen_Previews: PreviewProvider {
-//    static var previews: some View {
-//
-//        lockScreen(currentState: state)
-//    }
-//}
+struct lockScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        dateAndTime()
+    }
+}

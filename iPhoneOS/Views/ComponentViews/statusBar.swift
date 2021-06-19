@@ -16,6 +16,7 @@ struct statusBar: View {
             Spacer()
             Text("(BATTERY)")
         }
+        .padding(.bottom, 0)
         .foregroundColor(.white)
         .background(Color.black
                         .opacity(0.5))
