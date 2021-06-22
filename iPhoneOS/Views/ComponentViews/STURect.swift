@@ -49,7 +49,7 @@ struct STUgradient: View {
                 
                 withAnimation(.easeOut(duration: 2).repeatForever(autoreverses: false)) {
                     startPoint = UnitPoint(x: 1, y: 0)
-                    endPoint = UnitPoint(x: 1, y: 0)
+                    endPoint = UnitPoint(x: 1.5, y: 0)
 
                 }
             }
