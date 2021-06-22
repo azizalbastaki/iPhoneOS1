@@ -13,8 +13,10 @@ struct currentStateView: View {
         switch state.locked {
         case true:
             lockScreen(currentState: state)
+                .statusBar(hidden: true)
         default:
             ContentView()
+                .statusBar(hidden: true)
         }
     }
 }

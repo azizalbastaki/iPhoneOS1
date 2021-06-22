@@ -17,31 +17,34 @@ struct lockScreen: View {
             VStack {
                 iPhoneOS.statusBar()
                 dateAndTime()
-                ZStack {
-                    HStack {
-                        STUButton()
-                            .offset(x: isDragValid(drag: progress))
-                            .gesture(
-                                DragGesture()
-                                    .onChanged {
-                                        progress = $0.translation
-                                        progress.width = progress.width - CGFloat(startingPoint)
-                                        if checkDragUnlocked(drag: progress) == true {
-                                            progress.width = CGFloat(startingPoint)
-                                            currentState.locked = false
+                
+                Spacer()
+                ZStack{
+                STURect()
+                    ZStack {
+                        HStack {
+                            STUButton()
+                                .offset(x: isDragValid(drag: progress))
+                                .gesture(
+                                    DragGesture()
+                                        .onChanged {
+                                            progress = $0.translation
+                                            progress.width = progress.width - CGFloat(startingPoint)
+                                            if checkDragUnlocked(drag: progress) == true {
+                                                progress.width = CGFloat(startingPoint)
+                                                currentState.locked = false
+                                            }
                                         }
-                                    }
-                                    .onEnded {_ in
-                                        progress.width = CGFloat(startingPoint)
-                                    }
-                            )
-                            .padding(.leading, 70)
-                        Spacer()
+                                        .onEnded {_ in
+                                            progress.width = CGFloat(startingPoint)
+                                        }
+                                )
+                                .padding(.leading, 50)
+                            Spacer()
+                        }
                     }
                 }
-                Spacer()
             }
-            //.offset(y: 40)
             .background(
                 ZStack {
                     Color.black
@@ -66,7 +69,7 @@ func isDragValid(drag: CGSize) -> CGFloat {
 }
 
 func checkDragUnlocked(drag: CGSize) -> Bool {
-    if drag.width >= 150 {
+    if drag.width >= 210 {
         return true
     } else {
         return false
@@ -77,9 +80,8 @@ struct dateAndTime: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .center, endPoint: .top))
-                .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .padding(.top, -8)
+                .fill(LinearGradient(gradient: Gradient(colors: [justBlack, Color.gray]), startPoint: .center, endPoint: .top))
+                .frame(height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .opacity(0.6)
             VStack {
                 
@@ -88,15 +90,11 @@ struct dateAndTime: View {
                     .fontWeight(.light)
                 Text("Thursday, February 24")
                     .font(.custom("Helvetica", size: 20))
-                    //.fontWeight(.light)
             }.foregroundColor(.white)
-        }
+        }                .padding(.top, -10)
+
         
     }
 }
 
-struct lockScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        dateAndTime()
-    }
-}
+
