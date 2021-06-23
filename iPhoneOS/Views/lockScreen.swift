@@ -10,17 +10,18 @@ import SwiftUI
 let startingPoint: Int = 0
 
 struct lockScreen: View {
-    @State fileprivate var progress:CGSize = CGSize(width: CGFloat(startingPoint), height: 0)
-    
+    @State var progress:CGSize = CGSize(width: CGFloat(startingPoint), height: 0)
+
     @ObservedObject var currentState: currentView
     var body: some View {
             VStack {
                 iPhoneOS.statusBar()
                 dateAndTime()
-                
                 Spacer()
                 ZStack{
-                STURect()
+                    STURect(progressValue: Float(progress.width))
+                    STURectSlideArea()
+                        .opacity(1-(Double((-0.01*progress.width)+1)))
                     ZStack {
                         HStack {
                             STUButton()
@@ -50,7 +51,7 @@ struct lockScreen: View {
                     Color.black
                         .ignoresSafeArea()
                     
-                    Image("DisneyCruise")
+                    Image("Masfoot")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 }
@@ -60,6 +61,7 @@ struct lockScreen: View {
 }
 
 func isDragValid(drag: CGSize) -> CGFloat {
+    print(Double(Float(drag.width))*(-0.2)+1)
     if drag.width > CGFloat(startingPoint) {
         return drag.width
     }
@@ -96,5 +98,3 @@ struct dateAndTime: View {
         
     }
 }
-
-
