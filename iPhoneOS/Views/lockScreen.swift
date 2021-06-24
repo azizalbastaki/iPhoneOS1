@@ -19,7 +19,7 @@ struct lockScreen: View {
                 dateAndTime()
                 Spacer()
                 ZStack{
-                    STURect(progressValue: Float(progress.width))
+                    STURect()
                     STURectSlideArea()
                         .opacity(1-(Double((-0.01*progress.width)+1)))
                     ZStack {
@@ -51,7 +51,7 @@ struct lockScreen: View {
                     Color.black
                         .ignoresSafeArea()
                     
-                    Image("Masfoot")
+                    Image("DisneyCruise")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 }
@@ -79,19 +79,34 @@ func checkDragUnlocked(drag: CGSize) -> Bool {
 }
 
 struct dateAndTime: View {
+    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var currentTime: String = ""
+    @State private var currentday: String = ""
+    private let dateFormatter = DateFormatter()
+
+    private let timeFormatter = DateFormatter()
+    
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [justBlack, Color.gray]), startPoint: .center, endPoint: .top))
-                .frame(height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(height: 150, alignment: .center)
                 .opacity(0.6)
             VStack {
                 
-                Text("9:41")
+                Text(currentTime)
                     .font(.custom("Helvetica", size: 100))
                     .fontWeight(.light)
-                Text("Thursday, February 24")
+                    .onReceive(timer) { _ in
+                        self.currentTime = timeFormatter.string(from: Date())
+                    }
+                    .onAppear(perform: {timeFormatter.dateFormat = "h:mm"})
+                Text(currentday)
                     .font(.custom("Helvetica", size: 20))
+                    .onReceive(timer) { _ in
+                        self.currentday = dateFormatter.string(from: Date())
+                    }
+                    .onAppear(perform: {dateFormatter.dateFormat = "EEEE, MMMM d"})
             }.foregroundColor(.white)
         }                .padding(.top, -10)
 

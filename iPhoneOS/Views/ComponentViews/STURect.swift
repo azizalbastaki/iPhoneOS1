@@ -6,7 +6,6 @@
 import SwiftUI
 
 struct STURect: View {
-    @State var progressValue: Float
     var body: some View {
         ZStack {
             Rectangle()
@@ -69,6 +68,6 @@ struct STUgradient: View {
 
 struct lockScreen_Previews: PreviewProvider {
     static var previews: some View {
-        STURect(progressValue: 10)
+        STURect()
     }
 }
