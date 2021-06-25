@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C43137F26729E760000BC5B /* homeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43137E26729E760000BC5B /* homeButton.swift */; };
+		2C60E2412685BFEB00F5326F /* unlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C60E23F2685BFB900F5326F /* unlock.mp3 */; };
 		2C88FA3526751101007DDBB0 /* customColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88FA3426751101007DDBB0 /* customColors.swift */; };
 		2C88FA3726754B49007DDBB0 /* lockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88FA3626754B49007DDBB0 /* lockScreen.swift */; };
 		2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949872670BB5400E7BE25 /* iPhoneOSApp.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		2C43137E26729E760000BC5B /* homeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeButton.swift; sourceTree = "<group>"; };
+		2C60E23F2685BFB900F5326F /* unlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = unlock.mp3; path = iPhoneOS/Assets.xcassets/unlock.dataset/unlock.mp3; sourceTree = SOURCE_ROOT; };
 		2C88FA3426751101007DDBB0 /* customColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customColors.swift; sourceTree = "<group>"; };
 		2C88FA3626754B49007DDBB0 /* lockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lockScreen.swift; sourceTree = "<group>"; };
 		2C8949842670BB5400E7BE25 /* iPhoneOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C60E23E2685BF9400F5326F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2C60E23F2685BFB900F5326F /* unlock.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		2C89497B2670BB5400E7BE25 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		2C8949862670BB5400E7BE25 /* iPhoneOS */ = {
 			isa = PBXGroup;
 			children = (
+				2C60E23E2685BF9400F5326F /* Sounds */,
 				2CA1267E2677CDD40052FE78 /* Views */,
 				2CA12678267758DD0052FE78 /* customShapes.swift */,
 				2C88FA3426751101007DDBB0 /* customColors.swift */,
@@ -279,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C60E2412685BFEB00F5326F /* unlock.mp3 in Resources */,
 				2C89498F2670BB5600E7BE25 /* Preview Assets.xcassets in Resources */,
 				2C89498C2670BB5600E7BE25 /* Assets.xcassets in Resources */,
 			);

@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import AVFoundation
+var unlockSound: AVAudioPlayer!
+
 
 let startingPoint: Int = 0
 
@@ -34,6 +37,7 @@ struct lockScreen: View {
                                             if checkDragUnlocked(drag: progress) == true {
                                                 progress.width = CGFloat(startingPoint)
                                                 currentState.locked = false
+                                                playUnlockSound()
                                             }
                                         }
                                         .onEnded {_ in
@@ -61,7 +65,6 @@ struct lockScreen: View {
 }
 
 func isDragValid(drag: CGSize) -> CGFloat {
-    print(Double(Float(drag.width))*(-0.2)+1)
     if drag.width > CGFloat(startingPoint) {
         return drag.width
     }
@@ -75,6 +78,16 @@ func checkDragUnlocked(drag: CGSize) -> Bool {
         return true
     } else {
         return false
+    }
+}
+
+func playUnlockSound() {
+    let path = Bundle.main.url(forResource: "unlock", withExtension: "mp3")
+    do {
+        unlockSound = try AVAudioPlayer(contentsOf: path!)
+        unlockSound?.play()
+    } catch {
+        print("Eeek!")
     }
 }
 
