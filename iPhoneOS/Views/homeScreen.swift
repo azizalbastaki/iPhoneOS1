@@ -59,7 +59,6 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-
 struct appRow: View {
     var appIcons = Array(repeating: "Text", count: 4)
     var appExecutables = Array(repeating: SettingsApp(), count: 4)
