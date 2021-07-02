@@ -14,21 +14,26 @@ struct app: View {
     var body: some View {
         VStack {
             NavigationLink(
-                destination: appExecutable,
+                destination: appExecutable
+                    .navigationBarHidden(true)
+                    .navigationTitle(""),
                 label: {
                     Image(uiImage: icon)
                         .resizable()
                         .cornerRadius(10)
                         .frame(width: 60, height: 60, alignment: .center)
                 })
+                .navigationBarHidden(true)
+                .navigationTitle("")
             
             
-            Text(appName).font(.system(size:14))
+                        Text(appName).font(.system(size:14))
                 .foregroundColor(.white)
                 .bold()
         }
         
     }
+
 }
 
 

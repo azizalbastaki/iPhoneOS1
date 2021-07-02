@@ -18,6 +18,7 @@ struct lockScreen: View {
     @ObservedObject var currentState: currentView
     var body: some View {
             VStack {
+                
                 iPhoneOS.statusBar()
                 dateAndTime()
                 Spacer()

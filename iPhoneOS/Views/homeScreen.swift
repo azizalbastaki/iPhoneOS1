@@ -8,6 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init(){
+        UINavigationBar.setAnimationsEnabled(false)
+    }
+    var body: some View {
+        NavigationView {
+            homeScreen()
+        }
+        .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .edgesIgnoringSafeArea(.all)
+    }
+    
+}
+
+
+struct homeScreen: View {
     var body: some View {
         ZStack {
             Color.black
@@ -19,7 +37,7 @@ struct ContentView: View {
                 appRow(appIcons: ["YouTube","Stocks","Maps","Weather"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
                 
                 appRow(appIcons: ["Clock","Calculator","Notes","Settings"], appExecutables: [SettingsApp(), SettingsApp(), SettingsApp(), SettingsApp()])
-                VStack{
+                Spacer()
                 HStack {
                     ZStack{
                         Color.gray
@@ -36,21 +54,16 @@ struct ContentView: View {
                     }.frame(height: 100)
                 }
                 
-                homeButton()
-                    .offset(y:5)
-                }
-                .offset(y:250)
                 
-                
+                //homeButton()
+                //    .offset(y:5)
+
             }
-            .offset(x: 0, y: -120)
         }
         .background(Color.black
                         .ignoresSafeArea())
     }
-    
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

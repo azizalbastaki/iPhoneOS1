@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct SettingsApp: View {
+    @State var transitionSize = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Rectangle()
+            .scale(CGFloat(transitionSize))
+            .animation(Animation.easeIn(duration: 0.3), value: transitionSize)
+            .onAppear {transitionSize = 1}
+            .onDisappear{transitionSize = 0}
     }
+    
 }
 
 //struct SettingsApp_Previews: PreviewProvider {
