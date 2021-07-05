@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C43137F26729E760000BC5B /* homeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C43137E26729E760000BC5B /* homeButton.swift */; };
 		2C60E2412685BFEB00F5326F /* unlock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C60E23F2685BFB900F5326F /* unlock.mp3 */; };
+		2C61D54A26938803009F2706 /* calculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61D54926938803009F2706 /* calculatorApp.swift */; };
+		2C61D54D269388C4009F2706 /* appSuperStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61D54C269388C4009F2706 /* appSuperStruct.swift */; };
 		2C88FA3526751101007DDBB0 /* customColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88FA3426751101007DDBB0 /* customColors.swift */; };
 		2C88FA3726754B49007DDBB0 /* lockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88FA3626754B49007DDBB0 /* lockScreen.swift */; };
 		2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8949872670BB5400E7BE25 /* iPhoneOSApp.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		2C43137E26729E760000BC5B /* homeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeButton.swift; sourceTree = "<group>"; };
 		2C60E23F2685BFB900F5326F /* unlock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = unlock.mp3; path = iPhoneOS/Assets.xcassets/unlock.dataset/unlock.mp3; sourceTree = SOURCE_ROOT; };
+		2C61D54926938803009F2706 /* calculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorApp.swift; sourceTree = "<group>"; };
+		2C61D54C269388C4009F2706 /* appSuperStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = appSuperStruct.swift; path = iPhoneOS/Views/Apps/appSuperStruct.swift; sourceTree = SOURCE_ROOT; };
 		2C88FA3426751101007DDBB0 /* customColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customColors.swift; sourceTree = "<group>"; };
 		2C88FA3626754B49007DDBB0 /* lockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lockScreen.swift; sourceTree = "<group>"; };
 		2C8949842670BB5400E7BE25 /* iPhoneOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +104,24 @@
 				2C60E23F2685BFB900F5326F /* unlock.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		2C61D548269387EE009F2706 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				2C61D54C269388C4009F2706 /* appSuperStruct.swift */,
+				2C61D54B2693880A009F2706 /* Calculator */,
+				2C8949B626714F6400E7BE25 /* SettingsApp.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		2C61D54B2693880A009F2706 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				2C61D54926938803009F2706 /* calculatorApp.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		2C89497B2670BB5400E7BE25 = {
@@ -166,10 +188,10 @@
 		2CA1267E2677CDD40052FE78 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C61D548269387EE009F2706 /* Apps */,
 				2CA1267F2677CDFE0052FE78 /* ComponentViews */,
 				2CA1267C2677CD290052FE78 /* currentStateView.swift */,
 				2C8949892670BB5400E7BE25 /* homeScreen.swift */,
-				2C8949B626714F6400E7BE25 /* SettingsApp.swift */,
 				2C88FA3626754B49007DDBB0 /* lockScreen.swift */,
 			);
 			path = Views;
@@ -322,8 +344,10 @@
 				2C8949B726714F6400E7BE25 /* SettingsApp.swift in Sources */,
 				2C43137F26729E760000BC5B /* homeButton.swift in Sources */,
 				2CA12679267758DD0052FE78 /* customShapes.swift in Sources */,
+				2C61D54A26938803009F2706 /* calculatorApp.swift in Sources */,
 				2C8949882670BB5400E7BE25 /* iPhoneOSApp.swift in Sources */,
 				2C949355267E7882002B2331 /* STURect.swift in Sources */,
+				2C61D54D269388C4009F2706 /* appSuperStruct.swift in Sources */,
 				2CA1267D2677CD290052FE78 /* currentStateView.swift in Sources */,
 				2CA1268126793C280052FE78 /* statusBar.swift in Sources */,
 				2C88FA3526751101007DDBB0 /* customColors.swift in Sources */,
