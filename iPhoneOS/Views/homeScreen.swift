@@ -55,8 +55,8 @@ struct homeScreen: View {
                 }
                 
                 
-                //homeButton()
-                //    .offset(y:5)
+                homeButton()
+                    .offset(y:5)
 
             }
         }
